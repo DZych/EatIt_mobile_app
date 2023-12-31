@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EatIt.Views.DetailsRecipeView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+
+    <NavigationPage.TitleView>
+        <Label
+            FontFamily="GelionBold"
+            FontSize="20"
+            Text="Details"
+            TextColor="{StaticResource TextColor}"
+            VerticalOptions="Center" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout Padding="20,0,20,50">
+
+                    <!--  Dish Image  -->
+                    <Image
+                        Aspect="AspectFill"
+                        BackgroundColor="Gray"
+                        HeightRequest="180"
+                        Source="{Binding Dish.ImageUrl}" />
+
+                    <!--  Row with details of dish  -->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <!--<ColumnDefinition Width="*" />-->
+                        </Grid.ColumnDefinitions>
+
+                        <!--  Time  -->
+                        <Frame Grid.Row="0" Grid.Column="0">
+                            <StackLayout Padding="-10">
+                                <Image HeightRequest="30" Source="https://cdn-icons-png.flaticon.com/512/66/66163.png" />
+                                <Label
+                                    FontSize="20"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Dish.PreparationTime, StringFormat='{0} min'}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <!--  People  -->
+                        <Frame Grid.Row="0" Grid.Column="1">
+                            <StackLayout Padding="-10">
+                                <Image HeightRequest="30" Source="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" />
+                                <Label
+                                    FontSize="20"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Dish.NumberOfServings, StringFormat='{0} people'}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <!--  Rating  -->
+                        <!--<Frame Grid.Row="0" Grid.Column="2">
+                            <StackLayout Padding="-10">
+                                <Image HeightRequest="30" Source="https://cdn-icons-png.flaticon.com/512/1828/1828970.png" />
+                                <Label
+                                    FontSize="20"
+                                    HorizontalOptions="Center"
+                                    Text="4.7" />
+                            </StackLayout>
+                        </Frame>-->
+                    </Grid>
+
+                    <Frame>
+                        <StackLayout>
+                            <!--  Title of dish  -->
+                            <Label
+                                x:Name="TitleOfDish"
+                                Padding="10,0,0,0"
+                                FontSize="30"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding Dish.Title}"
+                                VerticalOptions="Center" />
+                            <Line
+                                Margin="0,-5,0,0"
+                                HorizontalOptions="Center"
+                                Stroke="#FFE338"
+                                StrokeThickness="10"
+                                X2="100" />
+
+                            <!--  Description of dish  -->
+                            <Label Padding="0,10,0,0" Text="{Binding Dish.Description}" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame>
+                        <StackLayout>
+                            <!--  Description of dish  -->
+                            <Label
+                                Padding="10,0,0,0"
+                                FontSize="30"
+                                HorizontalTextAlignment="Center"
+                                Text="Category"
+                                VerticalOptions="Center" />
+                            <Line
+                                Margin="0,-5,0,0"
+                                HorizontalOptions="Center"
+                                Stroke="#FFE338"
+                                StrokeThickness="10"
+                                X2="100" />
+                            <Label
+                                Padding="0,10,0,0"
+                                FontSize="20"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding DishCategoryToDisplay}" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame>
+                        <StackLayout>
+                            <!--  Ingredients  -->
+                            <Label
+                                Padding="10,0,0,0"
+                                FontSize="25"
+                                HorizontalOptions="Center"
+                                Text="Ingredients" />
+                            <Line
+                                Margin="0,-5,0,0"
+                                HorizontalOptions="Center"
+                                Stroke="#FFE338"
+                                StrokeThickness="10"
+                                X2="100" />
+
+                            <!--  List of ingredients  -->
+                            <StackLayout BindableLayout.ItemsSource="{Binding Dish.Ingredients}">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Path=., StringFormat='• {0}'}" />
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame>
+                        <StackLayout>
+                            <!--  Steps  -->
+                            <Label
+                                Padding="10,0,0,0"
+                                FontSize="25"
+                                HorizontalOptions="Center"
+                                Text="Steps" />
+                            <Line
+                                Margin="0,-5,0,0"
+                                HorizontalOptions="Center"
+                                Stroke="#FFE338"
+                                StrokeThickness="10"
+                                X2="100" />
+
+                            <!--  List of steps  -->
+                            <!--  List of ingredients  -->
+                            <StackLayout BindableLayout.ItemsSource="{Binding Dish.Steps}">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Path=., StringFormat='• {0}'}" />
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <!--  Add/Remove favorites  -->
+            <ImageButton
+                Margin="-10,-10,-10,-10"
+                Padding="10"
+                AbsoluteLayout.LayoutBounds=".95,.95,80,80"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                BackgroundColor="Transparent"
+                Command="{Binding ChangeStateOfDishCommand}"
+                Scale="0.8"
+                Source="{Binding ImagePathToFavoriteButton}" />
+
+
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EatIt.Views.FavouritesRecipesView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:Name="FavouritesRecipesPage">
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior Command="{Binding PageAppearingCommand}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+
+    <NavigationPage.TitleView>
+        <Label
+            FontFamily="GelionBold"
+            FontSize="20"
+            Text="Favourites recipes"
+            TextColor="{StaticResource TextColor}"
+            VerticalOptions="Center" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20,0,20,50">
+            <Label
+                FontFamily="GelionBold"
+                FontSize="30"
+                Text="Your favourites recipes"
+                TextColor="{StaticResource TextColor}" />
+            <Line
+                Margin="0,-5,0,0"
+                Stroke="#FFE338"
+                StrokeThickness="10"
+                X2="100" />
+            <Frame
+                Padding="0"
+                BackgroundColor="#f1f1f1"
+                CornerRadius="10"
+                MinimumHeightRequest="40">
+                <SearchBar
+                    FontSize="14"
+                    Placeholder="Search for recipe"
+                    Text="{Binding SearchText}">
+                    <SearchBar.Behaviors>
+                        <xct:EventToCommandBehavior Command="{Binding SearchCommand}" EventName="TextChanged" />
+                    </SearchBar.Behaviors>
+                </SearchBar>
+            </Frame>
+
+            <Picker
+                Title="Select category..."
+                ItemsSource="{Binding CategoryOfDishes}"
+                SelectedIndex="{Binding SelectedCategoryToFiltrIndex}">
+                <Picker.Behaviors>
+                    <xct:EventToCommandBehavior Command="{Binding FilterRecepiesByCategoryCommand}" EventName="SelectedIndexChanged" />
+                </Picker.Behaviors>
+            </Picker>
+
+            <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Vertical">
+                <StackLayout BindableLayout.ItemsSource="{Binding FavoriteDishesOfCurrentUser}" Orientation="Vertical">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                Margin="2,2,2,2"
+                                Padding="0"
+                                HasShadow="True">
+                                <Grid BackgroundColor="White">
+
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100" />
+                                    </Grid.RowDefinitions>
+
+                                    <Image
+                                        Grid.Column="0"
+                                        Aspect="AspectFill"
+                                        Source="{Binding ImageUrl}" />
+                                    <StackLayout Grid.Column="1">
+                                        <Label
+                                            Grid.Row="0"
+                                            Margin="0,5,0,0"
+                                            FontFamily="Gelion"
+                                            FontSize="20"
+                                            Text="{Binding Title}"
+                                            TextColor="{StaticResource TextColor}" />
+                                        <Label
+                                            Grid.Row="0"
+                                            Margin="0,-5,0,0"
+                                            FontFamily="Gelion"
+                                            FontSize="12"
+                                            MaxLines="3"
+                                            Text="{Binding Description}"
+                                            TextColor="{StaticResource TextColor}" />
+                                        <Label
+                                            Grid.Row="0"
+                                            FontFamily="Gelion"
+                                            FontSize="20"
+                                            Text="{Binding Rating}"
+                                            TextColor="{StaticResource TextColor}" />
+                                    </StackLayout>
+                                    <ImageButton
+                                        Grid.Column="2"
+                                        BackgroundColor="Transparent"
+                                        Command="{Binding BindingContext.RemoveFromFavoritesCommand, Source={x:Reference Name=FavouritesRecipesPage}}"
+                                        CommandParameter="{Binding Id}"
+                                        Scale="0.5"
+                                        Source="delete.png" />
+                                </Grid>
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding BindingContext.OpenDetailsCommand, Source={x:Reference Name=FavouritesRecipesPage}}" CommandParameter="{Binding Id}" />
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

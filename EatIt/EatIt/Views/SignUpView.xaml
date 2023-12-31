@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EatIt.Views.SignUpView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout Padding="50,20,50,50">
+            <Label
+                Margin="0,50,0,50"
+                FontFamily="Gelion"
+                FontSize="45"
+                HorizontalTextAlignment="Center"
+                Text="Create account"
+                TextColor="#323232" />
+
+            <Entry
+                FontFamily="Gelion"
+                Placeholder="Username"
+                Text="{Binding Username}" />
+            <Entry
+                FontFamily="Gelion"
+                Placeholder="Email"
+                Text="{Binding Email}" />
+            <Entry
+                FontFamily="Gelion"
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password}" />
+            <Entry
+                x:Name="Password"
+                FontFamily="Gelion"
+                IsPassword="True"
+                Placeholder="Confirm Password"
+                Text="{Binding RepeatedPassword}" />
+
+            <Grid Margin="3,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Column="0"
+                    Padding="0"
+                    FontFamily="Gelion"
+                    Text="Already have an account?" />
+                <Label
+                    Grid.Column="1"
+                    FontFamily="Gelion"
+                    HorizontalTextAlignment="Start"
+                    Text="Sign in"
+                    TextColor="DeepSkyBlue">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MoveToSignInCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+
+            <Button
+                Margin="10,50,10,0"
+                BackgroundColor="#FFE338"
+                Command="{Binding SignUpCommand}"
+                CornerRadius="50"
+                FontFamily="GelionBold"
+                Text="Sign Up"
+                TextColor="#323232" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

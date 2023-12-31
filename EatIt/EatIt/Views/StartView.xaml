@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EatIt.StartView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage.Content>
+        <StackLayout Padding="50,20,50,50">
+
+
+            <Label
+                Margin="0,-50,0,-25"
+                FontFamily="Gelion"
+                FontSize="120"
+                HorizontalTextAlignment="Center"
+                Text="EatIT"
+                TextColor="#323232" />
+
+            <Label
+                x:Name="Test"
+                Margin="0,0,0,-20"
+                FontFamily="GelionMedium"
+                HorizontalTextAlignment="Center"
+                Text="Are you ready to eat something good?"
+                TextColor="#626262" />
+
+            <Image
+                Margin="-2"
+                Scale="0.7"
+                Source="loginImagesmall.png" />
+
+
+            <Button
+                Margin="10,0,10,0"
+                BackgroundColor="#FFE338"
+                Clicked="SignInClicked"
+                CornerRadius="50"
+                FontFamily="GelionBold"
+                Text="Sign In"
+                TextColor="#323232" />
+            <Button
+                Margin="10,0,10,0"
+                BackgroundColor="White"
+                BorderColor="#FFE338"
+                BorderWidth="2"
+                Clicked="SignUpClicked"
+                CornerRadius="50"
+                FontFamily="GelionBold"
+                Text="Sign Up"
+                TextColor="#323232" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

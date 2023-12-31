@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="EatIt.iOS.app/EatIt.iOS">
+      <BCSymbolMapName>EatIt.iOS.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>EatIt.iOS.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>\Users\user226152\Library\Caches\Xamarin\mtbs\builds\EatIt.iOS\3bc0c5c088bbfcc158034155a09b28ec7553fff8973d06a6143e562850838c5b\obj\iPhoneSimulator\Debug\mtouch-symbols.list</SymbolFile>
+      <DSymName>EatIt.iOS.app.dSYM</DSymName>
+      <SourceProjectPath>E:\EatIt\EatIt\EatIt\EatIt.iOS</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

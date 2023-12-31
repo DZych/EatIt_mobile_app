@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EatIt.SideMenuViewFlyout"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    Title="Flyout"
+    Icon="{x:OnPlatform iOS=hamburgerMenu.png}">
+    <StackLayout>
+        <ListView
+            x:Name="MenuItemsListView"
+            HasUnevenRows="true"
+            ItemsSource="{Binding MenuItems}"
+            SeparatorVisibility="None">
+            <ListView.Header>
+                <Grid BackgroundColor="{StaticResource MainColor}" HeightRequest="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        FontFamily="Gelion"
+                        FontSize="22"
+                        HorizontalTextAlignment="Center"
+                        Text="Hello in EatIT!"
+                        VerticalOptions="Center" />
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+                            <Label
+                                FontFamily="Gelion"
+                                FontSize="24"
+                                Text="{Binding Title}"
+                                TextColor="{StaticResource TextColor}"
+                                VerticalOptions="FillAndExpand"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid BackgroundColor="{Binding ColorOfLogOut}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="15,10"
+                Scale="1.5"
+                Source="logout.png" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                FontFamily="Gelion"
+                FontSize="24"
+                Text="Logout"
+                TextColor="{StaticResource TextColor}"
+                VerticalTextAlignment="Center" />
+
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LogOutCommand}" />
+            </Grid.GestureRecognizers>
+        </Grid>
+
+    </StackLayout>
+</ContentPage>

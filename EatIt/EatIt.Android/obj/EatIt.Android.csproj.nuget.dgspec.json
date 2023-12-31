@@ -1,0 +1,169 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.Android\\EatIt.Android.csproj": {}
+  },
+  "projects": {
+    "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.Android\\EatIt.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.Android\\EatIt.Android.csproj",
+        "projectName": "EatIt.Android",
+        "projectPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.Android\\EatIt.Android.csproj",
+        "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
+        "outputPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Dominik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid12.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid12.0": {
+            "projectReferences": {
+              "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj": {
+                "projectPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid12.0": {
+          "dependencies": {
+            "Plugin.CloudFirestore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Plugin.FirebaseAuth": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Plugin.FirebaseStorage": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.3, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2515, )"
+            }
+          }
+        }
+      }
+    },
+    "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj",
+        "projectName": "EatIt",
+        "projectPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj",
+        "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
+        "outputPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Dominik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Plugin.CloudFirestore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Plugin.FirebaseAuth": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Plugin.FirebaseStorage": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "ReactiveProperty": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            },
+            "System.Reactive": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.3, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2515, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EatIt.Views.HomeView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:Name="HomeViewPage"
+    NavigationPage.HasBackButton="False">
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior Command="{Binding PageAppearingCommand}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+
+    <NavigationPage.TitleView>
+
+        <Label
+            FontFamily="GelionBold"
+            FontSize="20"
+            Text="Home"
+            TextColor="{StaticResource TextColor}"
+            VerticalOptions="Center" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20,0,20,50">
+            <!--  Your recepies  -->
+            <Label
+                FontFamily="GelionBold"
+                FontSize="28"
+                Text="Your favourite recipes"
+                TextColor="{StaticResource TextColor}" />
+            <Line
+                Margin="0,-5,0,0"
+                Stroke="#FFE338"
+                StrokeThickness="10"
+                X2="100" />
+
+            <!--  Cards With Saved Recepie  -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="270" />
+                </Grid.RowDefinitions>
+
+                <ScrollView Orientation="Vertical">
+                    <StackLayout BindableLayout.ItemsSource="{Binding AllFavoriteDishesOfCurrentUser}" Orientation="Vertical">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame
+                                    Margin="2,2,2,2"
+                                    Padding="0"
+                                    HasShadow="True">
+                                    <Grid BackgroundColor="White">
+
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="120" />
+                                            <ColumnDefinition Width="auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="80" />
+                                        </Grid.RowDefinitions>
+
+                                        <Image
+                                            Grid.Column="0"
+                                            Aspect="AspectFill"
+                                            Source="{Binding ImageUrl}" />
+                                        <StackLayout Grid.Column="1">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                            </Grid>
+                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="10,0,0,0"
+                                                FontFamily="Gelion"
+                                                FontSize="20"
+                                                MaxLines="1"
+                                                Text="{Binding Title}"
+                                                TextColor="{StaticResource TextColor}" />
+                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="10,0,10,0"
+                                                FontFamily="Gelion"
+                                                FontSize="12"
+                                                MaxLines="2"
+                                                Text="{Binding Description}"
+                                                TextColor="{StaticResource TextColor}" />
+                                        </StackLayout>
+                                    </Grid>
+
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding BindingContext.OpenDetailsCommand, Source={x:Reference Name=HomeViewPage}}" CommandParameter="{Binding Id}" />
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+
+            <Label
+                FontFamily="Gelion"
+                HorizontalTextAlignment="End"
+                Text="See All"
+                TextColor="DeepSkyBlue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenFavouriteRecepiesCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <!--  Your fridge  -->
+            <Label
+                x:Name="HeaderLabel"
+                FontFamily="GelionBold"
+                FontSize="28"
+                Text="Ready for something new?"
+                TextColor="{StaticResource TextColor}" />
+            <Line
+                Margin="0,-5,0,0"
+                Stroke="#FFE338"
+                StrokeThickness="10"
+                X2="100" />
+
+            <!--  Cards With Random Recepie  -->
+            <ScrollView Orientation="Horizontal">
+                <StackLayout BindableLayout.ItemsSource="{Binding RandomDishes}" Orientation="Horizontal">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                Margin="2,2,2,2"
+                                Padding="0"
+                                HasShadow="True"
+                                HeightRequest="160"
+                                WidthRequest="140">
+                                <Grid BackgroundColor="White">
+                                    <StackLayout>
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="80"
+                                            Source="{Binding ImageUrl}" />
+                                        <StackLayout>
+                                            <Label
+                                                Margin="5,0,5,0"
+                                                FontFamily="Gelion"
+                                                FontSize="20"
+                                                Text="{Binding Title}"
+                                                TextColor="{StaticResource TextColor}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding BindingContext.OpenDetailsCommand, Source={x:Reference Name=HomeViewPage}}" CommandParameter="{Binding Id}" />
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+            <Label
+                FontFamily="Gelion"
+                HorizontalTextAlignment="End"
+                Text="See All"
+                TextColor="DeepSkyBlue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenFindNewRecepiesCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
