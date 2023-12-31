@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jIPCeKCjpj59bXeESiqFbf/t6JHLMDQkGCZ8qeIlJIBnEL0uunrUf3VPA2+MreGcpWNgJO0UBJkdU2KH1xPMDQ==",
+  "dgSpecHash": "jJQ0PmOO1wk8J6WtQg6p1muVvRCvC63CiJCDbJjClFTMqRlgnN3TaPDQmxZXsngk6JsVySduf5prUHpFMQDnEQ==",
   "success": true,
-  "projectFilePath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj",
+  "projectFilePath": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt\\EatIt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dominik\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Dominik\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

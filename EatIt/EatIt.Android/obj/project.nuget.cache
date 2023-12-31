@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rHZZ/fgLI8eGiL5gWIQCY1erK+goeqhcuyCRisvO7zZNT+mR1pVmFzmB35rZKJFmcS86MUbcNgex4CiqiI9o7w==",
+  "dgSpecHash": "wD8VJIqdWOS7b16uFJW7ampRc2/qclTgvIhdStxjA4q/6BSZ4FKi4d6m64Efz8lxiypU2vqrpfKVrnh3dXpFjQ==",
   "success": true,
-  "projectFilePath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.Android\\EatIt.Android.csproj",
+  "projectFilePath": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt.Android\\EatIt.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dominik\\.nuget\\packages\\plugin.cloudfirestore\\4.1.0\\plugin.cloudfirestore.4.1.0.nupkg.sha512",
     "C:\\Users\\Dominik\\.nuget\\packages\\plugin.currentactivity\\2.1.0.4\\plugin.currentactivity.2.1.0.4.nupkg.sha512",

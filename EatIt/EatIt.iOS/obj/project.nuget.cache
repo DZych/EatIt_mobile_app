@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DSn0zGXTsJ/d3CYWiC7iEfFsiNw/DmBayT4FsylEpvJxHI1cWwQ7Fp2L35yPTq2kErUBjxYf5IJYwr323eC0QA==",
+  "dgSpecHash": "NZVlPU6e2xQPVVXsgB3xlOCa+yHaDk+iEWHywsrh8AYzK53ykHHrS6DoCp3m9GOSQoRB4DZ+sCkxsRM+PTq1yg==",
   "success": true,
-  "projectFilePath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.iOS\\EatIt.iOS.csproj",
+  "projectFilePath": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt.iOS\\EatIt.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dominik\\.nuget\\packages\\plugin.cloudfirestore\\4.1.0\\plugin.cloudfirestore.4.1.0.nupkg.sha512",
     "C:\\Users\\Dominik\\.nuget\\packages\\plugin.firebaseauth\\4.1.0\\plugin.firebaseauth.4.1.0.nupkg.sha512",

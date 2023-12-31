@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638395809571233221
+_nugetassetstimestamp=638395850966381982
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=f:\studia_ahe\programowanie_aplikacji_mobilnych_wyklad\aplikacja\eatit\eatit\eatit.android\eatit.android.csproj
+projectfullpath=e:\xampp\htdocs\cms_szkola_better\eatit_mobile_app\eatit\eatit.android\eatit.android.csproj

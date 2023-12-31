@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj": {}
+    "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt\\EatIt.csproj": {}
   },
   "projects": {
-    "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj": {
+    "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt\\EatIt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj",
+        "projectUniqueName": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt\\EatIt.csproj",
         "projectName": "EatIt",
-        "projectPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj",
+        "projectPath": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt\\EatIt.csproj",
         "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
-        "outputPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\obj\\",
+        "outputPath": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

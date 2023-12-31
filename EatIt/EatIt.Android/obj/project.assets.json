@@ -4847,11 +4847,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.Android\\EatIt.Android.csproj",
+      "projectUniqueName": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt.Android\\EatIt.Android.csproj",
       "projectName": "EatIt.Android",
-      "projectPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.Android\\EatIt.Android.csproj",
+      "projectPath": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt.Android\\EatIt.Android.csproj",
       "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
-      "outputPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt.Android\\obj\\",
+      "outputPath": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -4872,8 +4872,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj": {
-              "projectPath": "F:\\STUDIA_AHE\\programowanie_aplikacji_mobilnych_wyklad\\aplikacja\\EatIt\\EatIt\\EatIt\\EatIt.csproj"
+            "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt\\EatIt.csproj": {
+              "projectPath": "E:\\xampp\\htdocs\\cms_szkola_better\\EatIt_mobile_app\\EatIt\\EatIt\\EatIt.csproj"
             }
           }
         }
